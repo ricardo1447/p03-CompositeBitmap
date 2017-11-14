@@ -17,10 +17,22 @@ vector < vector < vector <Pixel> > > rgbValues(vector < string >&);//used for th
 
 Bitmap avgImage(vector < vector < vector < Pixel > > >&);//averages each image pixel by pixel
 
+const int maxFiles = 9;
+
 int main()
 {
+  Bitmap image;
+  vector < vector < vector < Pixel > > > image3D;
+  vector < string > list;
+  vector < vector < Pixel> > CompositeImage;
+  name(list);
+  rgbValues(list);
+  avgImage(image3D);
+  image.save("Composite-rflores42.bmp");
+
 
   return 0;
 }
 
 //functions
+
