@@ -59,7 +59,7 @@ vector < string > name(vector < string > FileList)
     {
       cout << "Please check that all the images are the same size or they're valid Bitmap files and then try again." <<endl;
     }
-  }while(FileList.size() <= maxFiles)
+  }while(FileList.size() <= maxFiles);
 
   return FileList;
 }
@@ -86,14 +86,14 @@ void startingSize(string first)
   if(validBmp(first) == true)
   {
     bmp = image.toPixelMatrix();
-    cout << first << " has been loaded.
+    cout << first << " has been loaded." << endl;
   }
 }
 
 vector < vector < vector < Pixel > > > regValues(vector < string >& list)
 {
   vector < vector < vector < Pixel > > > image3D;
-  vector < vector < Pixel > bmp;
+  vector < vector < Pixel > > bmp;
   Bitmap image;
 
   for(int i = 0;i < list.size();i++)
@@ -106,7 +106,7 @@ vector < vector < vector < Pixel > > > regValues(vector < string >& list)
  return image3D;
 }
   
-Bitmap avgImage(vector < vector < vector < Pixel > > >& List)
+Bitmap avgImage(vector < vector < vector < Pixel > > >&List)
 {
   Pixel rgb;
   Bitmap image;
